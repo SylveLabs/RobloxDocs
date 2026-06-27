@@ -38,8 +38,7 @@ end)
 Dereplictaed remotes meaning u can fire remotes that arent viewable in datamodel.
 
 Have a freezer and a model inside freezer and parent remote in workspace then model inside freezer.
-If u get a userdata reference of RemoteEvent u are able to call it even if its parented to a Freezer because the userdata is cached and no longer tries to create a new reference so it bypasses the **NotAccessible** check.
-
+If u get a userdata reference of RemoteEvent u are able to call it even if its parented to a Freezer because the userdata is cached and no longer tries to create a new reference so it bypasses the **NotReplicated** check.
 
 Fun fact if u just parent anything into a freezer those arent counted in getnilinstance() so u could hide things u dont want exploiters to see using Mirage.
 
