@@ -7,7 +7,7 @@ First we need understand a Roblox capability called **NotAccessible**.
 NotAccessible is a capability that controls whether scripts can obtain a userdata reference.
 When a thread lacks this capability and tries to access a instance with NotAccessible or its descendants, the engine returns nil.
 
-Then we get to Lightning, Teams
+Then we get to Lightning, Teams.
 They have a flag called NotReplicated enabled on them.
 When the server creates a clone, it exists in server memory but the replication filter sees NotReplicated blocks it from being serialized to clients
 
