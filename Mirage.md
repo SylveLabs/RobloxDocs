@@ -25,6 +25,8 @@ flowchart TD
     WRAP --> LUAU[Luau receives Instance reference]
     NIL --> LUAU2[Luau receives nil]
 ```
+(this flowchart is actually refering to NotAccessible but im just gonna pretend its not because its same thing but on client side smhhh)
+
 What isn't explained in Dark Arts is that this is how you can create a **dereplicated** remote.
 
 ```lua
