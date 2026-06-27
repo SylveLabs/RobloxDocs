@@ -198,3 +198,5 @@ Runner walk from **ScriptContext** must land the same pointer.
 ---
 
 Thanks for reading. Several and Setmetatables was here :3 baiiiiiiiiii
+
+This was AI generated work
