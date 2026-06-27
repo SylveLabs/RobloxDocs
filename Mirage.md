@@ -7,7 +7,11 @@ First we need understand a Roblox capability called **NotAccessible**.
 NotAccessible is a capability that controls whether scripts can obtain a userdata reference.
 When a thread lacks this capability and tries to access a instance with NotAccessible or its descendants, the engine returns nil.
 
-There is also another type of Mirage, aka RobloxLocked, The difference? RobloxLocked doesn't have a userdata reference on **Serverside** and **Client** (unless u have a extremely high identity) This lets people to hide scripts and remotes without fear of being seen.
+Then we get to Lightning, Teams
+They have a flag called NotReplicated enabled on them.
+When the server creates a clone, it exists in server memory but the replication filter sees NotReplicated blocks it from being serialized to clients
+
+There is also another type of Mirage, aka RobloxLocked, The difference? RobloxLocked doesn't have a userdata reference on **Serverside** and **Client** the result of NotAccessible (unless u have a extremely high identity) This lets people to hide scripts and remotes without fear of being seen.
 
 There are more types of Mirage (GreenFN, ReverseGreenFN) those wont be mentioned here.
 
@@ -31,8 +35,9 @@ workspace.DescendantAdded:Connect(function(v)
     end
 end)
 ``` 
-Dereplictaed remotes meaning u can fire remotes that arent viewable in datamodel
-Have a freezer and a model inside freezer and parent remote in workspace then model inside freezer
+Dereplictaed remotes meaning u can fire remotes that arent viewable in datamodel.
+
+Have a freezer and a model inside freezer and parent remote in workspace then model inside freezer.
 If u get a userdata reference of RemoteEvent u are able to call it even if its parented to a Freezer because the userdata is cached and no longer tries to create a new reference so it bypasses the **NotAccessible** check.
 
 
