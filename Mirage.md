@@ -21,7 +21,7 @@ flowchart TD
     WRAP --> LUAU[Luau receives Instance reference]
     NIL --> LUAU2[Luau receives nil]
 ```
-What isn't explained in Dark Arts is that this is how you can create a nil remote or hide instances from getnilinstance() a exploit function.
+What isn't explained in Dark Arts is that this is how you can create a nil remote.
 
 ```lua
 workspace.DescendantAdded:Connect(function(v)
@@ -32,6 +32,8 @@ workspace.DescendantAdded:Connect(function(v)
 end)
 ``` 
 If u get a userdata reference of RemoteEvent u are able to call it even if its parented to a Freezer because the userdata is cached and no longer tries to create a new reference so it bypasses the **NotAccessible** check.
+
+Fun fact if u just parent anything into a freezer those arent counted in getnilinstance() so u could hide things u dont want exploiters to see using Mirage.
 
 U might be asking how on earth do u create Lightning or Teams. Well 3 main ways
 1. Patching Roblox Studio in memory
