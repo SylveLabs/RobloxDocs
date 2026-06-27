@@ -27,7 +27,7 @@ What isn't explained in Dark Arts is that this is how you can create a nil remot
 workspace.DescendantAdded:Connect(function(v)
     if v:IsA("RemoteEvent") then
 		task.wait(5)
-        v:FireServer() -- this will fire even in mirage but needs to be replicated where client can get a referance
+        v:FireServer() -- this will fire even in mirage but needs to be replicated where client can get a reference
     end
 end)
 ``` 
