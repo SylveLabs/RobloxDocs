@@ -9,7 +9,7 @@ When a thread lacks this capability and tries to access a instance with NotAcces
 
 Then we get to Lightning, Teams.
 They have a flag called NotReplicated enabled on them.
-When the server creates a clone, it exists in server memory but the replication filter sees NotReplicated blocks it from being serialized to clients
+When the server creates a clone, it exists in server memory but the replication filter sees NotReplicated and blocks it from being serialized to clients.
 
 There is also another type of Mirage, aka RobloxLocked, The difference? RobloxLocked doesn't have a userdata reference on **Serverside** and **Client** the result of NotAccessible. (unless u have a extremely high identity) This lets people to hide scripts and remotes without fear of being seen.
 
